@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Navbar from "./Mycomponents/Navbar";
+import  Sidebar  from './Mycomponents/Sidebar';
+
+
 export default function Home() {
   return (
     <main className="min-h-screen ">
-      <Navbar/>
-      <h1>hero</h1>
+     <Sidebar/>
+      
     </main>
   );
 }
