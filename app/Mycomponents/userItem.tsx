@@ -1,17 +1,19 @@
-import React from 'react';
+import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const userItem = () => {
+const Useritem = () => {
   return (
-    <div>
+    <div className="flex items-center border rounded-[8px] p-4">
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" />
-        <AvatarFallback>CN</AvatarFallback>
+        <AvatarFallback></AvatarFallback>
       </Avatar>
-      <p>Biyash Shrestha</p>
-      <p>bsstha21@gmail.com</p>
+      <div className="flex flex-col p-2 grow ">
+      <p className="font-bold text-red-600">Biyash  Shrestha </p>
+      <span>bsstha21@gmail.com  </span>
+      </div>
     </div>
   );
 };
 
-export default userItem;
+export default Useritem;
