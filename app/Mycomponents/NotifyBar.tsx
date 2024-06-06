@@ -30,9 +30,9 @@ const NotifyBar: React.FC<NotifyBarProps> = ({ show }) => {
     },
     {
       avatar: "https://github.com/shadcn.png",
-      name: "Susmita pandey",
-      message: "started following you",
-      time: "1 hour ago"
+      name: "Dipesh sanjel",
+      message: "has invited to join the huddle metting at 9",
+      time: "5 minutes ago"
     },
     {
       avatar: "https://github.com/shadcn.png",

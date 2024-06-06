@@ -1,12 +1,15 @@
-'use client'
-import React from 'react'
-import { ModeToggle } from './ModeToggle'
+'use client';
+
+import React from 'react';
+import { ModeToggle } from './ModeToggle';
+import Image from 'next/image'; // Import Image component from next/image
+import logo from '../assets/logo.png'; // Import the image
 
 const Navbar = () => {
   return (
     <nav className='flex justify-between items-center p-2'>
       <div className="logo">
-        <img src="" className="h-11 w-auto" alt="Logo" />
+        <Image src={logo} className="h-11 w-auto bg-white rounded-xl" alt="Logo" />
       </div>
       <div className='flex-grow flex justify-center'>
         <ul className='flex gap-3 p-2 font-semibold'>
@@ -20,7 +23,7 @@ const Navbar = () => {
         <ModeToggle />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
