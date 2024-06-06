@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Useritem = () => {
   return (
-    <div className="flex items-center border rounded-[8px] p-4">
+    <div className="flex items-center border rounded-[8px] p-4 dark:hover:bg-slate-800 hover:bg-slate-400">
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" />
         <AvatarFallback></AvatarFallback>

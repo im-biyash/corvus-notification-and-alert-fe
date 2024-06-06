@@ -1,56 +1,60 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Useritem from "./Useritem";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineForwardToInbox } from "react-icons/md";
-import { IoIosNotifications } from "react-icons/io";
+import NotifyBar from "./NotifyBar";
 import {
   Command,
-  CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command"
-
+} from "@/components/ui/command";
 
 const Sidebar = () => {
-  return (
-    <div className="flex flex-col w-[300px] border-r min-h-screen">
-      <p>Menubar</p>
-      <Useritem /> {/* Use the corrected component name */}
-     <div>
-     <Command>
-  <CommandInput placeholder="Type a command or search..." />
-  <CommandList>
-    <CommandEmpty>No results found.</CommandEmpty>
-    <CommandGroup heading="Suggestions" className="ml-2 text-xl">
-      <div className="flex items-center ">
-    <CgProfile />
-      <CommandItem>Profile</CommandItem>
-      </div>
-      <div className="flex items-center">
-       <MdOutlineForwardToInbox />
-      <CommandItem>Inbox</CommandItem>
-      </div>
-      <div className="flex items-center">
-      <IoIosNotifications />
-      <CommandItem>Notifications</CommandItem>
-      </div>
-      
-    </CommandGroup>
-    <CommandSeparator />
-    <CommandGroup heading="Settings">
-      <CommandItem>Settings</CommandItem>
-      
-      <CommandItem>Settings</CommandItem>
-    </CommandGroup>
-  </CommandList>
-</Command>
+  const [shownotifyBar, setShownotifyBar] = useState(false);
 
-     </div>
+  const toggleNotifyBar = () => {
+    setShownotifyBar(!shownotifyBar);
+    console.log(shownotifyBar);
+  };
+
+  return (
+    <div className="flex min-h-screen">
+      <div className="flex flex-col w-[250px] border-r">
+        <p>Menubar</p>
+        <Useritem />
+        <div>
+          <Command>
+            <CommandInput placeholder="Type a command or search..." />
+            <CommandList>
+              <CommandEmpty>No results found.</CommandEmpty>
+              <CommandGroup heading="Suggestions" className="ml-2 text-xl">
+                <CommandItem className="flex items-center" onClick={() => console.log("Profile clicked")}>
+                  <CgProfile />
+                  <span>Profile</span>
+                </CommandItem>
+                <CommandItem className="flex items-center" onClick={() => console.log("Inbox clicked")}>
+                  <MdOutlineForwardToInbox />
+                  <span>Inbox</span>
+                </CommandItem>
+                <CommandItem className="flex items-center" >
+                  <span onClick={toggleNotifyBar}>Notifications</span>
+                </CommandItem>
+              </CommandGroup>
+              <CommandSeparator />
+              <CommandGroup heading="Settings">
+                <CommandItem>Settings</CommandItem>
+                <CommandItem>Settings</CommandItem>
+              </CommandGroup>
+            </CommandList>
+          </Command>
+        </div>
+      </div>
+      <NotifyBar show={shownotifyBar} />
     </div>
   );
 };
