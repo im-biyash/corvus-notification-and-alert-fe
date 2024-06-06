@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import UserItem from "./UserItem";
 import { CgProfile } from "react-icons/cg";
+import { IoNotifications } from "react-icons/io5";
 import { MdOutlineForwardToInbox } from "react-icons/md";
 import NotifyBar from "./NotifyBar";
 import {
@@ -33,15 +34,16 @@ const Sidebar = () => {
             <CommandList>
               <CommandEmpty>No results found.</CommandEmpty>
               <CommandGroup heading="Suggestions" className="ml-2 text-xl">
-                <CommandItem className="flex items-center" onClick={() => console.log("Profile clicked")}>
+                <CommandItem className="flex items-center gap-2" onClick={() => console.log("Profile clicked")}>
                   <CgProfile />
                   <span>Profile</span>
                 </CommandItem>
-                <CommandItem className="flex items-center" onClick={() => console.log("Inbox clicked")}>
+                <CommandItem className="flex items-center gap-2" onClick={() => console.log("Inbox clicked")}>
                   <MdOutlineForwardToInbox />
                   <span>Inbox</span>
                 </CommandItem>
-                <CommandItem className="flex items-center" >
+                <CommandItem className="flex items-center gap-2" >
+                <IoNotifications />
                   <span onClick={toggleNotifyBar}>Notifications</span>
                 </CommandItem>
               </CommandGroup>

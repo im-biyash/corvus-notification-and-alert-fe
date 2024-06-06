@@ -49,13 +49,13 @@ const NotifyBar: React.FC<NotifyBarProps> = ({ show }) => {
   ];
   
   return (
-    <div className="w-[300px] border-l min-h-screen border-r-2">
+    <div className="w-[300px]  min-h-screen border-r-2">
       <h2 className="p-4">Notifications</h2>
       <div>
         {notifyitems.map((item, index) => (
           <div
             key={index}
-            className={`flex items-center  space-x-4 py-2 hover:bg-gray-900 ${index !== 0 ? 'border-t border-gray-200' : ''}`}
+            className={`flex items-center ml-5  space-x-4 py-2 hover:bg-gray-900 ${index !== 0 ? 'border-t border-gray-200' : ''}`}
           >
             <img src={item.avatar} alt={`${item.name} avatar`} className="w-10 h-10 rounded-full" />
             <div>
