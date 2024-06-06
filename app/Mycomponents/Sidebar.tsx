@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-// import Useritem from "./Useritem";
+import UserItem from "./UserItem";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineForwardToInbox } from "react-icons/md";
 import NotifyBar from "./NotifyBar";
@@ -26,7 +26,7 @@ const Sidebar = () => {
     <div className="flex min-h-screen">
       <div className="flex flex-col w-[250px] border-r">
         <p>Menubar</p>
-        {/* <Useritem /> */}
+        <UserItem />
         <div>
           <Command>
             <CommandInput placeholder="Type a command or search..." />

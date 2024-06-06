@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const Useritem = () => {
+const UserItem = () => {
   return (
     <div className="flex items-center border rounded-[8px] p-4 dark:hover:bg-slate-800 hover:bg-slate-400">
       <Avatar>
@@ -16,4 +16,4 @@ const Useritem = () => {
   );
 };
 
-export default Useritem;
+export default UserItem;
