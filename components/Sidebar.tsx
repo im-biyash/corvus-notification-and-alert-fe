@@ -26,7 +26,7 @@ const Sidebar = () => {
   return (
     <div className="flex min-h-screen">
       <div className="flex flex-col w-[250px] border-r">
-        <p>Menubar</p>
+        <p className="p-2 my-2 text-center">Menubar</p>
         <UserItem />
         <div>
           <Command>
